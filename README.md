@@ -1,2 +1,2 @@
 # my-game-case
-game showcase
+game showcase project
