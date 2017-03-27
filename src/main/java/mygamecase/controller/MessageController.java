@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package sample.web.ui.mvc;
+package mygamecase.controller;
 
 import javax.validation.Valid;
 
-import sample.web.ui.Message;
-import sample.web.ui.MessageRepository;
+import mygamecase.Message;
+import mygamecase.MessageRepository;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -36,7 +36,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
  * @author Doo-Hwan Kwak
  */
 @Controller
-@RequestMapping("/")
+@RequestMapping("/messages")
 public class MessageController {
 
 	private final MessageRepository messageRepository;

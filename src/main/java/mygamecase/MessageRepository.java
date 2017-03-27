@@ -11,7 +11,7 @@
  * specific language governing permissions and limitations under the License.
  */
 
-package sample.web.ui;
+package mygamecase;
 
 /**
  * @author Rob Winch

@@ -14,10 +14,11 @@
  * limitations under the License.
  */
 
-package sample.web.ui;
+package mygamecase;
 
 import java.util.regex.Pattern;
 
+import mygamecase.SampleWebUiApplication;
 import org.hamcrest.Description;
 import org.hamcrest.TypeSafeMatcher;
 import org.junit.Before;
