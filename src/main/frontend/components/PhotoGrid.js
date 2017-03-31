@@ -1,11 +1,14 @@
 import React from 'react';
 import Photo from './Photo';
+import Game from './Game';
 
 const PhotoGrid = React.createClass({
   render() {
     return (
-      <div className="photo-grid">
-        {this.props.posts.map((post, i) => <Photo {...this.props} key={i} i={i} post={post} />)}
+      <div>
+        <div className="game-grid">
+          {this.props.games.map((game, i) => <Game {...this.props} key={i} i={i} game={game} />)}
+        </div>
       </div>
     )
   }
