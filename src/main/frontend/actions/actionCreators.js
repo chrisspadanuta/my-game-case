@@ -24,3 +24,11 @@ export function removeComment(postId, i) {
     postId
   }
 }
+
+export function filterGames(searchText, i) {
+  return {
+    type: 'FILTER_GAMES',
+    i,
+    searchText
+  }
+}

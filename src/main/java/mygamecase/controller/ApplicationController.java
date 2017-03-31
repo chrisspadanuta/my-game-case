@@ -3,6 +3,7 @@ package mygamecase.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -10,6 +11,11 @@ import org.springframework.web.servlet.ModelAndView;
 public class ApplicationController {
     @GetMapping
     public ModelAndView list() {
+        return new ModelAndView("index");
+    }
+
+    @RequestMapping(value="gameregistration", method= RequestMethod.GET)
+    public ModelAndView gameRegistration() {
         return new ModelAndView("index");
     }
 }
