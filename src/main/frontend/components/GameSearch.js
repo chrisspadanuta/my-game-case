@@ -41,9 +41,9 @@ const GameSearch = React.createClass({
 
     return (
       <div className="games-search">
-        <input type="text" name="games_search" id="games_search" placeholder="Game Search" onChange={this.updateSearch.bind(this)}/>
+        <input type="text" name="games_search" id="games_search" placeholder="Game Search" onChange={this.updateSearch}/>
         <button name="register_game">Add New</button>
-        <SearchList filteredList={filteredGames} addItemCallback={this.props.addItemCallback} {...this.state.props} />
+        <SearchList filteredList={filteredGames} addItemCallback={this.props.addItemCallback} />
       </div>
     )
   }
