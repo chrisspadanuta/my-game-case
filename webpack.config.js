@@ -21,10 +21,15 @@ module.exports = {
         loaders: ['babel-loader'],
         exclude: /node_modules/
       },
-      // CSS
+      // styl
       {
         test: /\.styl$/,
         loader: 'style-loader!css-loader!stylus-loader'
+      },
+      // CSS
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
       }
     ]
   }

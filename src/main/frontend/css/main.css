@@ -1,0 +1,129 @@
+.registration-split-view {
+  width: 100%;
+}
+
+.registration-split-view .game-showcase {
+  border: 2px solid #333;
+  border-radius: 8px;
+  display: inline-block;
+  margin: 10px;
+  vertical-align: top;
+  width: 700px;
+}
+
+.registration-split-view .games-search {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.games-search {
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  background-color: black;
+  width: 400px;
+}
+
+.games-search input {
+  width: 290px;
+  font-size: 2.0rem;
+}
+
+.games-search .search-list .search-match {
+  background-color: rgb(32, 32, 32);
+  color: #125688;
+  font-size: 1.5rem;
+  padding: 5px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.game-showcase {
+  background-color: #222222;
+  border: 1px solid #333333;
+}
+
+.game-showcase .player-info {
+  border-collapse: separate;
+  border-spacing: 15px;
+  display: table;
+  padding: 5px 10px;
+}
+
+.game-showcase .player-info .picture {
+  background-image: url('/images/u_logo.png');
+  border: 1px solid #999;
+  display: table-cell;
+  width: 100px;
+  height: 100px;
+}
+
+.game-showcase .player-info .name {
+  display: table-cell;
+  font-family: 'Verdana';
+  font-size: 24px;
+  color: white;
+}
+
+.game-list {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  width: 95%;
+}
+
+.game-list h2 {
+  color: white;
+  text-align: center;
+  font-size: 18px;
+}
+
+/*.game-list .platform-header {
+  background-color: #333;
+  display: table-header-group;
+  font-size: 14px;
+  margin: 0;
+}
+
+.game-list .game-row {
+  display: table-row;
+}
+
+.game-list .game-row .game-cell {
+  background-color: #444;
+  border: 1px solid #333;
+  display: table-cell;
+  font-size: 12px;
+  padding: 5px 10px;
+}*/
+
+.game-list table {
+  border-collapse: collapse;
+  margin: 10px 0 20px 0;
+  width: 100%;
+}
+
+.game-list table th {
+  background-color: #333;
+  font-size: 14px;
+  padding: 5px 10px;
+  text-align: left;
+}
+
+.game-list table td {
+  background-color: #444;
+  border: 1px solid #333;
+  font-size: 12px;
+  padding: 5px 10px;
+}
+
+
+
+.game-news-feed {
+
+}
+
+.game-news-feed .item {
+
+}

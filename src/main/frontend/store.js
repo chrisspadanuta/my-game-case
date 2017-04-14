@@ -8,12 +8,14 @@ import rootReducer from './reducers/index';
 import comments from './data/comments';
 import posts from './data/posts';
 import games from './data/games';
+import platforms from './data/platforms';
 
 // create an object for the default data
 const defaultState = {
   posts,
   comments,
-  games
+  games,
+  platforms
 };
 
 const store = createStore(rootReducer, defaultState);

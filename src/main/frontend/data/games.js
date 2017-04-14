@@ -78,6 +78,31 @@ const games = [
 		"id": 16,
 		"name": "River City Ransom",
 		"platform": "NES"
+	},
+	{
+		"id": 17,
+		"name": "Altered Beast",
+		"platform": "GEN"
+	},
+	{
+		"id": 18,
+		"name": "Sonic The Hedgehog",
+		"platform": "GEN"
+	},
+	{
+		"id": 19,
+		"name": "Golden Axe",
+		"platform": "GEN"
+	},
+	{
+		"id": 20,
+		"name": "Ecco The Dolphin",
+		"platform": "GEN"
+	},
+	{
+		"id": 21,
+		"name": "Vectorman",
+		"platform": "GEN"
 	}
 ]
 
