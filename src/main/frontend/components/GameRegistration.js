@@ -1,12 +1,58 @@
 import React from 'react';
+import fetch from 'node-fetch';
 import GameSearch from './GameSearch';
 import GameShowcase from './GameShowcase';
 
 const GameRegistration = React.createClass({
   getInitialState: function() {
     return {
+      games: [],
       playersGames: []
     };
+  },
+
+  componentWillMount() {
+    // called before first render
+  },
+
+  componentDidMount() {
+    // called after first render
+    fetch('http://localhost:8080/games/list')
+      .then((response) => response.json())
+      .then(games => {
+        //console.log(games);
+        this.setState({ games });
+      }).catch((error) => {
+          console.error(error);
+      });
+      fetch('http://localhost:8080/games/player/1234/games')
+        .then((response) => response.json())
+        .then(playersGames => {
+          console.log(playersGames);
+          this.setState({ playersGames });
+        }).catch((error) => {
+            console.error(error);
+        });
+  },
+
+  componentDidUpdate: function(prevProps, prevState) {
+    if (prevState.playersGames !== this.state.playersGames) {
+      console.log("players games changed");
+      console.log(JSON.stringify(this.state.playersGames));
+      fetch('http://localhost:8080/games/player/1234/games', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(this.state.playersGames)
+        })
+        .then((response) => response.text()).then((body) => {
+          console.log("saved players games");
+        }).catch((error) => {
+          console.error(error);
+        })
+    }
   },
 
   sortByName: function(a,b) {
@@ -38,7 +84,7 @@ const GameRegistration = React.createClass({
   render() {
     return (
       <div className="games-registration registration-split-view">
-        <GameSearch addItemCallback={this.addItemCallback} sortByName={this.sortByName} availableGames={this.props.games} />
+        <GameSearch addItemCallback={this.addItemCallback} sortByName={this.sortByName} availableGames={this.state.games} />
         <GameShowcase playersGames={this.state.playersGames} platforms={this.props.platforms}/>
       </div>
     )

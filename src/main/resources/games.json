@@ -78,5 +78,30 @@
 		"id": 16,
 		"name": "River City Ransom",
 		"platform": "NES"
+	},
+	{
+		"id": 17,
+		"name": "Altered Beast",
+		"platform": "GENESIS"
+	},
+	{
+		"id": 18,
+		"name": "Sonic The Hedgehog",
+		"platform": "GENESIS"
+	},
+	{
+		"id": 19,
+		"name": "Golden Axe",
+		"platform": "GENESIS"
+	},
+	{
+		"id": 20,
+		"name": "Ecco The Dolphin",
+		"platform": "GENESIS"
+	},
+	{
+		"id": 21,
+		"name": "Vectorman",
+		"platform": "GENESIS"
 	}
 ]

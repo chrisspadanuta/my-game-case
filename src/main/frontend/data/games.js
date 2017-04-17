@@ -82,27 +82,27 @@ const games = [
 	{
 		"id": 17,
 		"name": "Altered Beast",
-		"platform": "GEN"
+		"platform": "GENESIS"
 	},
 	{
 		"id": 18,
 		"name": "Sonic The Hedgehog",
-		"platform": "GEN"
+		"platform": "GENESIS"
 	},
 	{
 		"id": 19,
 		"name": "Golden Axe",
-		"platform": "GEN"
+		"platform": "GENESIS"
 	},
 	{
 		"id": 20,
 		"name": "Ecco The Dolphin",
-		"platform": "GEN"
+		"platform": "GENESIS"
 	},
 	{
 		"id": 21,
 		"name": "Vectorman",
-		"platform": "GEN"
+		"platform": "GENESIS"
 	}
 ]
 

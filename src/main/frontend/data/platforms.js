@@ -1,7 +1,7 @@
 const platforms = {
   NES: "Nintendo Entertainment System",
   GB: "Gameboy",
-  GEN: "Genesis",
+  GENESIS: "Genesis",
   SNES: "Super Nintendo"
 };
 

@@ -1,8 +1,9 @@
 import React from 'react';
 import GameSearch from './GameSearch';
+import GamePlatformTable from './GamePlatformTable';
 
 const GameShowcase = React.createClass({
-  render() {
+  createGameTables() {
     let gamesByPlatformTables = [];
     if (this.props.playersGames.length > 0) {
       let gamesForPlatform = [];
@@ -11,36 +12,22 @@ const GameShowcase = React.createClass({
       this.props.playersGames.forEach((game) => {
         if (game.platform !== lastPlatform) {
           gamesByPlatformTables.push(
-            <table key={lastPlatform}>
-              <thead>
-                <tr>
-                  <th>{this.props.platforms[lastPlatform]}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {gamesForPlatform}
-              </tbody>
-            </table>
+            <GamePlatformTable key={lastPlatform} platform={this.props.platforms[lastPlatform]} games={gamesForPlatform} />
           );
           gamesForPlatform = [];
         }
-        gamesForPlatform.push(<tr key={game.id}><td key={game.id}>{game.name}</td></tr>);
+        gamesForPlatform.push(game);
         lastPlatform = game.platform;
       });
       gamesByPlatformTables.push(
-        <table key={lastPlatform}>
-          <thead>
-            <tr>
-              <th>{this.props.platforms[lastPlatform]}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {gamesForPlatform}
-          </tbody>
-        </table>
+        <GamePlatformTable key={lastPlatform} platform={this.props.platforms[lastPlatform]} games={gamesForPlatform} />
       );
     }
+    return gamesByPlatformTables;
+  },
 
+  render() {
+    let gamesByPlatformTables = this.createGameTables();
     return (
       <div className="game-showcase">
         <div className="player-info">
