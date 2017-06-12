@@ -8,9 +8,11 @@ import css2 from './css/main.css';
 
 // Import Components
 import App from './components/App';
+import GameFeed from './components/GameFeed';
 import Single from './components/Single';
 import PhotoGrid from './components/PhotoGrid';
 import GameRegistration from './components/GameRegistration';
+import SoundTest from './components/SoundTest';
 
 // import react router dependencies
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
@@ -21,9 +23,9 @@ const router = (
   <Provider store={store}>
     <Router history={history}>
       <Route path="/" component={App}>
-        <IndexRoute component={PhotoGrid}></IndexRoute>
-        <Route path="/view/:postId" component={Single}></Route>
-        <Route path="/gameregistration" component={GameRegistration}></Route>
+        <IndexRoute component={GameFeed}></IndexRoute>
+        <Route path="/registration" component={GameRegistration}></Route>
+        <Route path="/soundtest" component={SoundTest}></Route>
       </Route>
     </Router>
   </Provider>

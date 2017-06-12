@@ -32,7 +32,7 @@ const GameShowcase = React.createClass({
       <div className="game-showcase">
         <div className="player-info">
           <div className="picture"></div>
-          <div className="name">Ultronator</div>
+          <div className="name">Ultronator's</div>
         </div>
         <div className="game-list">
           <h2>--- GAMES ---</h2>

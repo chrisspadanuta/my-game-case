@@ -1,4 +1,4 @@
-package mygamecase;
+package mygamecase.db;
 
 import mygamecase.domain.Game;
 import mygamecase.domain.PlayersGame;

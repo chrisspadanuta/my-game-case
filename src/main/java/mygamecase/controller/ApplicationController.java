@@ -14,8 +14,13 @@ public class ApplicationController {
         return new ModelAndView("index");
     }
 
-    @RequestMapping(value="gameregistration", method= RequestMethod.GET)
+    @RequestMapping(value="registration", method= RequestMethod.GET)
     public ModelAndView gameRegistration() {
+        return new ModelAndView("index");
+    }
+
+    @RequestMapping(value="soundtest", method= RequestMethod.GET)
+    public ModelAndView soundTest() {
         return new ModelAndView("index");
     }
 }

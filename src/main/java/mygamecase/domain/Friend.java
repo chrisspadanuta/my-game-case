@@ -1,10 +1,7 @@
 package mygamecase.domain;
 
-public class Player {
+public class Friend {
     private long id;
     private String name;
     private String icon;
-
-    private PlayersGame[] games;
-    private Friend[] friends;
 }
