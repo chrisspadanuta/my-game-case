@@ -1,0 +1,348 @@
+$mobile-device: 600px;
+$desktop-device: 601px;
+
+// "Instagram-like" webfont
+@font-face {
+    font-family: 'billabongregular';
+    src: url('https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.eot');
+    src: url('https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.woff') format('woff'),
+         url('https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.ttf') format('truetype'),
+         url('https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.svg#billabongregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html, body {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Verdana';
+  font-size: 1.5em;
+  background-color: #111;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'billabong', 'billabongregular';
+  text-align: center;
+  font-weight: 100;
+  font-size: 3em;
+  margin: 0;
+  letter-spacing: -1px;
+  text-shadow: 0px 4px 0 rgba(18, 86, 136, 0.11);
+  a {
+    color: #125688;
+    text-decoration: none;
+  }
+}
+
+textarea {
+  background-color: #666;
+  border: 1px solid #444;
+  color: black;
+}
+
+input[type="text"] {
+  background-color: #666;
+  border: 1px solid #444;
+  color: black;
+}
+
+.form-area {
+  margin: 15px 5px;
+  text-align: left;
+
+  .form-item {
+    margin: 20px 5px;
+  }
+
+  .submit-btn {
+    text-align: right;
+  }
+}
+
+.registration-split-view {
+  @media (max-width: $mobile-device) {
+    padding: 2px;
+  }
+
+  @media (min-width: $desktop-device) {
+    padding: 10px;
+  }
+
+  .games-search {
+    vertical-align: top;
+    padding: 10px;
+    text-align: center;
+    background-color: #222;
+
+    @media (max-width: $mobile-device) {
+    }
+    @media (min-width: $desktop-device) {
+      display: inline-block;
+      width: 400px;
+    }
+
+    input {
+      font-size: 1.5em;
+      margin-bottom: 3px;
+      width: 100%;
+    }
+
+    button {
+      font-size: 1em;
+      padding: 10px;
+      @media (max-width: $mobile-device) {
+        width: 100%;
+      }
+    }
+
+    .search-list {
+      .search-match {
+        background-color: rgb(32, 32, 32);
+        color: #125688;
+        font-size: 1em;
+        padding: 5px;
+        text-align: left;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .game-showcase {
+    border: 2px solid #333;
+    border-radius: 8px;
+    margin: 10px 0px;
+    vertical-align: top;
+
+    @media (max-width: $mobile-device) {
+    }
+    @media (min-width: $desktop-device) {
+      display: inline-block;
+      width: 700px;
+    }
+  }
+}
+
+.game-showcase {
+  background-color: #222222;
+  border: 1px solid #333333;
+}
+
+.game-showcase .player-info {
+  border-collapse: separate;
+  border-spacing: 15px;
+  display: table;
+  padding: 5px 10px;
+}
+
+.game-showcase .player-info .picture {
+  background-image: url('/images/u_logo.png');
+  border: 1px solid #999;
+  display: table-cell;
+  width: 100px;
+  height: 100px;
+}
+
+.game-showcase .player-info .name {
+  display: table-cell;
+  font-family: 'Verdana';
+  font-size: 24px;
+  color: white;
+}
+
+.game-list {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  width: 95%;
+}
+
+.game-list h2 {
+  color: white;
+  text-align: center;
+  font-size: 18px;
+}
+
+/*.game-list .platform-header {
+  background-color: #333;
+  display: table-header-group;
+  font-size: 14px;
+  margin: 0;
+}
+
+.game-list .game-row {
+  display: table-row;
+}
+
+.game-list .game-row .game-cell {
+  background-color: #444;
+  border: 1px solid #333;
+  display: table-cell;
+  font-size: 12px;
+  padding: 5px 10px;
+}*/
+
+.game-list table {
+  border-collapse: collapse;
+  margin: 10px 0 20px 0;
+  width: 100%;
+}
+
+.game-list table th {
+  background-color: #333;
+  font-size: 14px;
+  padding: 5px 10px;
+  text-align: left;
+}
+
+.game-list table td {
+  background-color: #444;
+  border: 1px solid #333;
+  font-size: 12px;
+  padding: 5px 10px;
+}
+
+.games-dropdown input[type="text"] {
+  font-size: 16px;
+  padding: 5px;
+}
+
+.games-dropdown .clear-selection {
+  font-size: 10px;
+}
+
+.games-dropdown .search-list {
+  position: absolute;
+}
+
+.games-dropdown .search-list .search-match {
+  background-color: rgb(32, 32, 32);
+  color: #125688;
+  font-size: 1.5rem;
+  padding: 5px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.game-feed {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.game-feed .new-post {
+  border: 1px solid #444;
+  background-color: #333;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.game-feed .new-post .post-content {
+  text-align: center;
+}
+
+.game-feed .new-post .post-text {
+  width: 100%;
+  height: 50px;
+  resize: none;
+}
+
+.game-feed .new-post div.table {
+  display: table;
+  width: 100%;
+}
+
+.game-feed .new-post div.cell {
+  display: table-cell;
+}
+
+.game-feed .feed-items {
+  margin-bottom: 20px;
+}
+
+.game-feed .feed-items .feed-item {
+  background-color: #222;
+  border: 1px solid #333;
+}
+
+.game-feed .feed-item .header {
+  border-collapse: separate;
+  border-spacing: 10px;
+  width: 100%;
+  display: table;
+}
+
+.game-feed .feed-item .header .box {
+  display: table-cell;
+}
+
+.game-feed .feed-item .header .player-icon {
+  width: 50px;
+}
+
+.game-feed .feed-item .header .player-icon .image {
+  border: 1px solid #999;
+  background-image: url('/images/u_logo.png');
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+}
+
+.game-feed .feed-item .header .info {
+  vertical-align: top;
+}
+
+.game-feed .feed-item .header .info h2.player-name {
+  font-size: 1.7em;
+  color: #999;
+  letter-spacing: 0.1em;
+}
+
+.game-feed .feed-item .header .info h3.game-name {
+  font-size: 1.2em;
+  color: #777;
+}
+
+.game-feed .feed-item .header .timestamp {
+  float: right;
+  color: #999;
+  font-size: 1.2em;
+  vertical-align: top;
+}
+
+.game-feed .feed-item .player-info {
+  border-collapse: separate;
+  border-spacing: 10px;
+  display: table;
+  width: 100%;
+}
+
+.game-feed .feed-item .post {
+  padding: 8px 12px;
+}
+
+.game-feed .feed-item .post .text {
+  color: #aaa;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+.game-feed .feed-item .post .screen-shot {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.game-feed .feed-item .post .screen-shot img {
+}

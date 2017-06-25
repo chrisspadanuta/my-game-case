@@ -3,8 +3,9 @@ import React from 'react';
 import { render } from 'react-dom';
 
 // Import css-loader
-import css from './styles/style.styl';
-import css2 from './css/main.css';
+//import css from './styles/style.styl';
+//import css2 from './css/main.css';
+import css3 from './css/main.scss';
 
 // Import Components
 import App from './components/App';

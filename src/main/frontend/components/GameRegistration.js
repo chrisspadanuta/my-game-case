@@ -3,6 +3,8 @@ import fetch from 'node-fetch';
 import GameSearch from './GameSearch';
 import GameShowcase from './GameShowcase';
 
+import gameRegistrationStyles from '../styles/GameRegistrationStyle';
+
 const GameRegistration = React.createClass({
   getInitialState: function() {
     return {
@@ -85,6 +87,8 @@ const GameRegistration = React.createClass({
       });
     }
   },
+
+  // className={gameRegistrationStyles.root}
 
   render() {
     return (

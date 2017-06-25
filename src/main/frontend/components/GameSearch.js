@@ -2,6 +2,8 @@ import React from 'react';
 import SearchList from './SearchList';
 import NewGameModal from './NewGameModal';
 
+import gameSearchStyles from '../styles/GameSearchStyle';
+
 class GameSearch extends React.Component {
   constructor(props) {
     super(props);
@@ -99,6 +101,8 @@ class GameSearch extends React.Component {
       </form>
       </NewGameModal>);
     }
+
+    // className={gameSearchStyles.root}
 
     return (
       <div className="games-search">
