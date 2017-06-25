@@ -3,14 +3,13 @@ import { style, media } from 'typestyle';
 const gameRegistrationStyles = {
   root: style(
     {
-      width: '100%'
+      fontSize: '30px'
     },
     media({ maxWidth: '600px'}, {
-      fontSize: '30px',
-      padding: '10px'
+      padding: '2px'
     }),
     media({ minWidth: '601px'}, {
-      fontSize: '20px',
+      padding: '10px'
     })
   )
 }

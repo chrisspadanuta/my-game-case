@@ -80,10 +80,10 @@ input[type="text"] {
   }
 
   .games-search {
-    vertical-align: top;
+    background-color: #222;
     padding: 10px;
     text-align: center;
-    background-color: #222;
+    vertical-align: top;
 
     @media (max-width: $mobile-device) {
     }

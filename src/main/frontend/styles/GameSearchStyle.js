@@ -3,18 +3,24 @@ import { style, media } from 'typestyle';
 const gameSearchStyles = {
   root: style(
     {
-      backgroundColor: 'black',
-      display: 'inline-block',
+      backgroundColor: '#222',
       padding: '10px',
       textAlign: 'center',
-      verticalAlign: 'top'
+      verticalAlign: 'top',
+      $nest: {
+        input: {
+          fontSize: '1.5em',
+          marginBottom: '3px',
+          width: '100%'
+        },
+        button: {
+          fontSize: '1em',
+          padding: '10px;'
+        }
+      }
     },
-    media({ maxWidth: '600px'}, {
-      fontSize: '30px',
-      width: '100%'
-    }),
     media({ minWidth: '601px'}, {
-      fontSize: '30px',
+      display: 'inline-block',
       width: '400px'
     })
   ),
