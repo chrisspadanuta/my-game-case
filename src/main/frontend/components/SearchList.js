@@ -21,7 +21,6 @@ const SearchList = React.createClass({
     return (
       <div className="search-list">
         { this.props.filteredList.map(renderOne) }
-        <br/>
       </div>
     );
   }

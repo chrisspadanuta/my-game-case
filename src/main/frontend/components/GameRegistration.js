@@ -3,6 +3,7 @@ import fetch from 'node-fetch';
 import GameSearch from './GameSearch';
 import GameShowcase from './GameShowcase';
 
+import css from '../css/game-registration.scss';
 import gameRegistrationStyles from '../styles/GameRegistrationStyle';
 
 const GameRegistration = React.createClass({

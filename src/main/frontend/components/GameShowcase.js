@@ -2,6 +2,8 @@ import React from 'react';
 import GameSearch from './GameSearch';
 import GamePlatformTable from './GamePlatformTable';
 
+import css from '../css/game-showcase.scss';
+
 const GameShowcase = React.createClass({
   createGameTables() {
     let gamesByPlatformTables = [];

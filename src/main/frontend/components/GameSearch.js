@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchList from './SearchList';
-import NewGameModal from './NewGameModal';
+import MakeshiftModal from './MakeshiftModal';
 
 import gameSearchStyles from '../styles/GameSearchStyle';
 
@@ -91,7 +91,7 @@ class GameSearch extends React.Component {
 
     let newGameModal = null;
     if (this.state.newGameModal) {
-      newGameModal = (<NewGameModal closeCallback={this.closeNewGameModal}>
+      newGameModal = (<MakeshiftModal closeCallback={this.closeNewGameModal}>
         <form className="form-area" onSubmit={this.submitNewGame}>
           <div className="form-item">Name:<br/><input type="text" id="name" name="name" value={this.state.modalForm.name || this.state.searchText} onChange={this.handleModalChangeField}/></div>
           <div className="form-item">Platform:<br/><input type="text" id="platform" name="platform" onChange={this.handleModalChangeField}/></div>
@@ -99,7 +99,7 @@ class GameSearch extends React.Component {
           {this.state.modalForm.name}<br/>
         {this.state.modalForm.platform}<br/>
       </form>
-      </NewGameModal>);
+      </MakeshiftModal>);
     }
 
     // className={gameSearchStyles.root}
@@ -107,8 +107,10 @@ class GameSearch extends React.Component {
     return (
       <div className="games-search">
         {newGameModal}
-        <input type="text" name="games_search" id="games_search" placeholder="Game Search" onChange={this.updateSearch} value={this.state.searchText}/>
-        <button name="register_game" onClick={this.showNewGameModal}>Add New</button>
+        <div className="search-controls">
+          <input type="text" name="games_search" id="games_search" placeholder="Game Search" onChange={this.updateSearch} value={this.state.searchText}/>
+          <button name="register_game" onClick={this.showNewGameModal}></button>
+        </div>
         {
           searchText.length > 1 && filteredGames.length > 0
           ? <SearchList filteredList={filteredGames} addItemCallback={this.addItemCallback} />

@@ -1,7 +1,7 @@
 $mobile-device: 600px;
 $desktop-device: 601px;
 
-.new-game-modal {
+.makeshift-modal {
   font-family: sans-serif;
   font-size: 16px;
 }
@@ -12,7 +12,7 @@ input[type="text"] {
   color: black;
 }
 
-.new-game-modal {
+.makeshift-modal {
   .area {
     top: 0;
     right: 0;
@@ -27,7 +27,7 @@ input[type="text"] {
       @media (max-width: $mobile-device) {
       }
       @media (min-width: $desktop-device) {
-        width: 800px;
+        width: 500px;
       }
 
       .header {
@@ -62,7 +62,7 @@ input[type="text"] {
   }
 }
 
-.new-game-modal {
+.makeshift-modal {
   .backdrop {
     background-color: #000;
     top: 0;

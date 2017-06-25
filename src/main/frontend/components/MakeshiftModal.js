@@ -8,7 +8,7 @@ import css from '../css/makeshift-modal.scss';
 class NewGameModal extends React.Component {
   render() {
     return (
-      <div className="new-game-modal">
+      <div className="makeshift-modal">
         <div className="area">
           <div className="box">
             <div className="header">

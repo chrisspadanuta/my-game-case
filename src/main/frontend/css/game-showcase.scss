@@ -1,0 +1,105 @@
+$mobile-device: 600px;
+$desktop-device: 601px;
+
+.game-showcase {
+  background-color: #222222;
+  border: 2px solid #333;
+  border-radius: 8px;
+  vertical-align: top;
+
+  @media (max-width: $mobile-device) {
+    margin: 10px 0px;
+  }
+  @media (min-width: $desktop-device) {
+    display: inline-block;
+    margin: 0px 10px;
+    width: 700px;
+  }
+
+  .player-info {
+    border-collapse: separate;
+    border-spacing: 15px;
+    display: table;
+    padding: 5px 10px;
+
+    .picture {
+      background-image: url('/images/u_logo.png');
+      border: 1px solid #999;
+      display: table-cell;
+      width: 100px;
+      height: 100px;
+    }
+
+    .name {
+      display: table-cell;
+      font-family: 'Verdana';
+      font-size: 24px;
+      color: white;
+    }
+  }
+
+  .game-list {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 95%;
+
+    h2 {
+      color: white;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin: 10px 0 20px 0;
+      width: 100%;
+
+      th {
+        background-color: #333;
+        padding: 5px 10px;
+        text-align: left;
+
+        @media (max-width: $mobile-device) {
+          font-size: 0.9em;
+        }
+        @media (min-width: $desktop-device) {
+          font-size: 0.7em;
+        }
+      }
+
+      td {
+        background-color: #444;
+        border: 1px solid #333;
+        padding: 5px 10px;
+
+        @media (max-width: $mobile-device) {
+          font-size: 0.9em;
+        }
+        @media (min-width: $desktop-device) {
+          font-size: 0.7em;
+        }
+      }
+    }
+  }
+}
+
+/*.game-list .platform-header {
+  background-color: #333;
+  display: table-header-group;
+  font-size: 14px;
+  margin: 0;
+}
+
+.game-list .game-row {
+  display: table-row;
+}
+
+.game-list .game-row .game-cell {
+  background-color: #444;
+  border: 1px solid #333;
+  display: table-cell;
+  font-size: 12px;
+  padding: 5px 10px;
+}*/
