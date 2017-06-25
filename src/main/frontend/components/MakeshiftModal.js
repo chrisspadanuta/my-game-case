@@ -5,14 +5,14 @@ import GameShowcase from './GameShowcase';
 
 import css from '../css/makeshift-modal.scss';
 
-class NewGameModal extends React.Component {
+class MakeshiftModal extends React.Component {
   render() {
     return (
       <div className="makeshift-modal">
         <div className="area">
           <div className="box">
             <div className="header">
-              Title
+              {this.props.title}
               <div className="close-btn" onClick={() => (this.props.closeCallback()) }>&times;</div>
             </div>
             <div className="body">
@@ -26,4 +26,4 @@ class NewGameModal extends React.Component {
   }
 }
 
-export default NewGameModal
+export default MakeshiftModal

@@ -13,6 +13,7 @@ const GameShowcase = React.createClass({
 
       this.props.playersGames.forEach((game) => {
         if (game.platform !== lastPlatform) {
+          gamesForPlatform.sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
           gamesByPlatformTables.push(
             <GamePlatformTable key={lastPlatform} platform={this.props.platforms[lastPlatform]} games={gamesForPlatform} />
           );
@@ -21,9 +22,12 @@ const GameShowcase = React.createClass({
         gamesForPlatform.push(game);
         lastPlatform = game.platform;
       });
+      gamesForPlatform.sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
       gamesByPlatformTables.push(
         <GamePlatformTable key={lastPlatform} platform={this.props.platforms[lastPlatform]} games={gamesForPlatform} />
       );
+
+
     }
     return gamesByPlatformTables;
   },

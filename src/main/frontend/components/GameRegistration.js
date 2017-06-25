@@ -19,8 +19,10 @@ const GameRegistration = React.createClass({
   },
 
   componentDidMount() {
+    const currentLocation = window.location;
+    const urlStart = `${currentLocation.protocol}//${currentLocation.host}`;
     // called after first render
-    fetch('http://localhost:8080/games/list')
+    fetch(`${urlStart}/games/list`)
       .then((response) => response.json())
       .then(games => {
         //console.log(games);
@@ -28,7 +30,7 @@ const GameRegistration = React.createClass({
       }).catch((error) => {
           console.error(error);
       });
-      fetch('http://localhost:8080/games/players/1234/games')
+      fetch(`${urlStart}/games/players/1234/games`)
         .then((response) => response.json())
         .then(playersGames => {
           console.log(playersGames);
@@ -39,10 +41,12 @@ const GameRegistration = React.createClass({
   },
 
   componentDidUpdate: function(prevProps, prevState) {
+    const currentLocation = window.location;
+    const urlStart = `${currentLocation.protocol}//${currentLocation.host}`;
     if (prevState.playersGames !== this.state.playersGames) {
       //console.log("players games changed");
       //console.log(JSON.stringify(this.state.playersGames));
-      fetch('http://localhost:8080/games/players/1234/games', {
+      fetch(`${urlStart}/games/players/1234/games`, {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
@@ -78,13 +82,17 @@ const GameRegistration = React.createClass({
   addItemCallback: function(game) {
     if (!game.id) {
       game.id = this.state.games[this.state.games.length - 1].id + 1;
-      this.state.games.push(game);
+      //this.state.games.push(game);
+      let playersGames = [...this.state.playersGames, game];
       //console.log(this.state.games);
+      this.setState({
+        playersGames: playersGames.sort(this.sortByPlatform)
+      });
     }
     if (!this.gamesArrayContains(this.state.playersGames, game)) {
       let playersGames = [...this.state.playersGames, game];
       this.setState({
-        playersGames: playersGames.sort(this.sortByName).sort(this.sortByPlatform)
+        playersGames: playersGames.sort(this.sortByPlatform)
       });
     }
   },
