@@ -9,18 +9,16 @@ class MakeshiftModal extends React.Component {
   render() {
     return (
       <div className="makeshift-modal">
-        <div className="area">
-          <div className="box">
-            <div className="header">
-              {this.props.title}
-              <div className="close-btn" onClick={() => (this.props.closeCallback()) }>&times;</div>
-            </div>
-            <div className="body">
-              {this.props.children}
-            </div>
+        <div className="backdrop" onClick={() => (this.props.closeCallback()) }></div>
+        <div className="box">
+          <div className="header">
+            <div className="close-btn" onClick={() => (this.props.closeCallback()) }>&times;</div>
+            <div className="title">{this.props.title}</div>
+          </div>
+          <div className="body">
+            {this.props.children}
           </div>
         </div>
-        <div className="backdrop"></div>
       </div>
     )
   }

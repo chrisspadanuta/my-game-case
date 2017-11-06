@@ -13,18 +13,26 @@ input[type="text"] {
 }
 
 .makeshift-modal {
-  .area {
+  /*.area {
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     position: fixed;
-    z-index: 1050;
+    z-index: 1050;*/
 
     .box {
-      margin: 90px auto;
+      position: absolute;
+      top: 50%;
+      /*right: 0;
+      bottom: 0;*/
+      left: 50%;
+      /*margin: 90px auto;*/
+      transform: translate(-50%, -50%);
+      z-index: 9999;
 
       @media (max-width: $mobile-device) {
+        width: 100%;
       }
       @media (min-width: $desktop-device) {
         width: 500px;
@@ -39,14 +47,20 @@ input[type="text"] {
         color: #ccc;
         font-weight: bold;
         letter-spacing: 2px;
-        padding: 10px 10px 8px 10px;
+        /*padding: 10px 10px 8px 10px;*/
         text-align: left;
 
+        .title {
+          padding: 10px 0px 8px 10px;
+        }
+
         .close-btn {
+          position: absolute;
           cursor: pointer;
-          font-size: 20px;
-          float: right;
-          line-height: 14px;
+          font-size: 24px;
+          padding: 10px 14px 4px 14px;
+          top: -4px;
+          right: -4px;
         }
       }
 
@@ -59,18 +73,16 @@ input[type="text"] {
         padding: 8px 10px 5px 10px;
       }
     }
-  }
-}
+  /*}*/
 
-.makeshift-modal {
   .backdrop {
+    position: absolute;
     background-color: #000;
+    width: 100%;
+    height: 100%;
     top: 0;
-    right: 0;
-    bottom: 0;
     left: 0;
     opacity: 0.6;
-    position: fixed;
-    z-index: 1040;
+    z-index: 9998;
   }
 }
