@@ -13,67 +13,70 @@ input[type="text"] {
 }
 
 .makeshift-modal {
-  /*.area {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    position: fixed;
-    z-index: 1050;*/
+  .box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
 
-    .box {
-      position: absolute;
-      top: 50%;
-      /*right: 0;
-      bottom: 0;*/
-      left: 50%;
-      /*margin: 90px auto;*/
-      transform: translate(-50%, -50%);
-      z-index: 9999;
+    background-color: #ccc;
+    border-top: 2px solid #999;
+    border-left: 2px solid #999;
+    border-right: 2px solid #999;
+    border-bottom: 2px solid #999;
+    border-radius: 8px;
 
-      @media (max-width: $mobile-device) {
-        width: 100%;
-      }
-      @media (min-width: $desktop-device) {
-        width: 500px;
-      }
+    @media (max-width: $mobile-device) {
+      width: 100%;
+    }
+    @media (min-width: $desktop-device) {
+      width: 500px;
+    }
 
-      .header {
-        background-color: #111;
-        border-top: 2px solid #999;
-        border-left: 2px solid #999;
-        border-right: 2px solid #999;
-        border-radius: 8px 8px 0px 0px;
-        color: #ccc;
-        font-weight: bold;
-        letter-spacing: 2px;
-        /*padding: 10px 10px 8px 10px;*/
-        text-align: left;
+    .header {
+      background-color: #111;
+      border-radius: 6px 6px 0px 0px;
+      color: #ccc;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-align: left;
 
-        .title {
-          padding: 10px 0px 8px 10px;
-        }
-
-        .close-btn {
-          position: absolute;
-          cursor: pointer;
-          font-size: 24px;
-          padding: 10px 14px 4px 14px;
-          top: -4px;
-          right: -4px;
-        }
+      .title {
+        padding: 10px 0px 8px 10px;
       }
 
-      .body {
-        background-color: #ccc;
-        border-left: 2px solid #999;
-        border-right: 2px solid #999;
-        border-bottom: 2px solid #999;
-        border-radius: 0px 0px 8px 8px;
-        padding: 8px 10px 5px 10px;
+      .close-btn {
+        position: absolute;
+        cursor: pointer;
+        font-size: 24px;
+        padding: 10px 14px 4px 14px;
+        top: -6px;
+        right: -4px;
       }
     }
-  /*}*/
+
+    .body {
+      padding: 14px 12px 8px 12px;
+    }
+
+    .footer {
+      border-radius: 0 0 6px 6px;
+      .actions {
+        border-top: 2px solid #bbb;
+        padding: 10px 12px;
+        display: flex;
+        justify-content: flex-end;
+        .button-wrap {
+          padding: 0 0 0 20px;
+        }
+        button {
+          font-size: 1.5em;
+          padding: 4px 14px;
+        }
+      }
+    }
+  }
 
   .backdrop {
     position: absolute;

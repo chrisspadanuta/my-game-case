@@ -92,11 +92,10 @@ class GameSearch extends React.Component {
 
     let newGameModal = null;
     if (this.state.newGameModal) {
-      newGameModal = (<MakeshiftModal title="Add New Game" closeCallback={this.closeNewGameModal}>
+      newGameModal = (<MakeshiftModal title="Add New Game" cancelCallback={this.closeNewGameModal} confirmCallback={this.submitNewGame} confirmText="Create">
         <form className="form-area" onSubmit={this.submitNewGame}>
           <div className="form-item">Name:<br/><input type="text" id="name" name="name" value={this.state.modalForm.name || this.state.searchText} onChange={this.handleModalChangeField}/></div>
           <div className="form-item">Platform:<br/><input type="text" id="platform" name="platform" onChange={this.handleModalChangeField}/></div>
-          <div className="submit-btn"><button name="submit" onClick={this.submitNewGame}>Create</button></div>
           {this.state.modalForm.name}<br/>
         {this.state.modalForm.platform}<br/>
       </form>

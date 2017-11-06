@@ -62,14 +62,14 @@ input[type="text"] {
   color: black;
   font-size: 1.5em;
   padding: 5px;
+  box-sizing: border-box;
 }
 
 .form-area {
-  margin: 15px 5px;
   text-align: left;
 
   .form-item {
-    margin: 20px 0;
+    margin: 0 0 20px 0;
     width: 100%;
     input[type="text"] {
       width: 100%;
