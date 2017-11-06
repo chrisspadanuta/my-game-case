@@ -2,6 +2,7 @@ import React from 'react';
 import SearchList from './SearchList';
 import MakeshiftModal from './MakeshiftModal';
 
+import css from '../css/game-search.scss';
 import gameSearchStyles from '../styles/GameSearchStyle';
 
 class GameSearch extends React.Component {

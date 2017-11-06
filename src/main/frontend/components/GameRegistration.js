@@ -3,7 +3,7 @@ import fetch from 'node-fetch';
 import GameSearch from './GameSearch';
 import GameShowcase from './GameShowcase';
 
-import css from '../css/game-registration.scss';
+//import css from '../css/game-registration.scss';
 import gameRegistrationStyles from '../styles/GameRegistrationStyle';
 
 const GameRegistration = React.createClass({
@@ -97,13 +97,18 @@ const GameRegistration = React.createClass({
     }
   },
 
+  // className="games-registration registration-split-view"
   // className={gameRegistrationStyles.root}
 
   render() {
     return (
-      <div className="games-registration registration-split-view">
-        <GameSearch addItemCallback={this.addItemCallback} sortByName={this.sortByName} availableGames={this.state.games} />
-        <GameShowcase playersGames={this.state.playersGames} platforms={this.props.platforms}/>
+      <div className={gameRegistrationStyles.root}>
+        <div className={gameRegistrationStyles.leftMenu}>
+          <GameSearch addItemCallback={this.addItemCallback} sortByName={this.sortByName} availableGames={this.state.games} />
+        </div>
+        <div className={gameRegistrationStyles.contentArea}>
+          <GameShowcase playersGames={this.state.playersGames} platforms={this.props.platforms}/>
+        </div>
       </div>
     )
   }

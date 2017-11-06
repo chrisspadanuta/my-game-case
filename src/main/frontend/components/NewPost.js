@@ -2,6 +2,9 @@ import React from 'react';
 import fetch from 'node-fetch';
 import DropDownSearch from './DropDownSearch';
 
+import { newPost } from '../styles/GameFeedStyle.js';
+import css from '../css/new-post.scss';
+
 const NewPost = React.createClass({
   getInitialState: function() {
     return {
@@ -65,7 +68,7 @@ const NewPost = React.createClass({
 
   render() {
     return (
-      <div className="new-post">
+      <div className={newPost + " new-post"}>
         <div className="post-content">
           <textarea id="post_text" className="post-text" onChange={this.updateSearch}></textarea>
         </div>

@@ -1,5 +1,5 @@
-$mobile-device: 600px;
-$desktop-device: 601px;
+$mobile-device: 900px;
+$desktop-device: 901px;
 
 .game-showcase {
   background-color: #222222;
@@ -7,31 +7,36 @@ $desktop-device: 601px;
   border-radius: 8px;
   vertical-align: top;
 
-  @media (max-width: $mobile-device) {
-    margin: 10px 0px;
+  /*@media (max-width: $mobile-device) {
+    margin: 10px 5px;
   }
   @media (min-width: $desktop-device) {
-    display: inline-block;
-    margin: 0px 10px;
-    width: 700px;
-  }
+    margin: 0px 20px;
+    max-width: 1000px;
+  }*/
 
   .player-info {
     border-collapse: separate;
     border-spacing: 15px;
-    display: table;
+    /*display: table;*/
+    display: flex;
+    justify-content: flex-start;
     padding: 5px 10px;
 
     .picture {
       background-image: url('/images/u_logo.png');
       border: 1px solid #999;
-      display: table-cell;
+      /*display: table-cell;*/
+      flex: none;
+      margin: 10px;
       width: 100px;
       height: 100px;
     }
 
     .name {
-      display: table-cell;
+      /*display: table-cell;*/
+      flex: auto;
+      margin: 10px;
       font-family: 'Verdana';
       font-size: 24px;
       color: white;
@@ -39,34 +44,39 @@ $desktop-device: 601px;
   }
 
   .game-list {
-    display: table;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-    width: 95%;
+    /*display: table;*/
+    padding: 10px 20px;
 
     h2 {
       color: white;
       text-align: center;
-      font-size: 18px;
+
+      font-size: 0.8em;
+      /*@media (max-width: $mobile-device) {
+        font-size: 1.0em;
+      }
+      @media (min-width: $desktop-device) {
+        font-size: 0.8em;
+      }*/
     }
 
     table {
       border-collapse: collapse;
-      margin: 10px 0 20px 0;
       width: 100%;
+      margin: 15px 0 5px 0;
 
       th {
         background-color: #333;
         padding: 5px 10px;
         text-align: left;
 
-        @media (max-width: $mobile-device) {
+        font-size: 0.7em;
+        /*@media (max-width: $mobile-device) {
           font-size: 0.9em;
         }
         @media (min-width: $desktop-device) {
           font-size: 0.7em;
-        }
+        }*/
       }
 
       td {
@@ -74,12 +84,13 @@ $desktop-device: 601px;
         border: 1px solid #333;
         padding: 5px 10px;
 
-        @media (max-width: $mobile-device) {
+        font-size: 0.7em;
+        /*@media (max-width: $mobile-device) {
           font-size: 0.9em;
         }
         @media (min-width: $desktop-device) {
           font-size: 0.7em;
-        }
+        }*/
       }
     }
   }

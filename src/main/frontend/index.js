@@ -13,6 +13,7 @@ import GameFeed from './components/GameFeed';
 import Single from './components/Single';
 import PhotoGrid from './components/PhotoGrid';
 import GameRegistration from './components/GameRegistration';
+import PlayerProfile from './components/PlayerProfile';
 import SoundTest from './components/SoundTest';
 
 // import react router dependencies
@@ -26,6 +27,7 @@ const router = (
       <Route path="/" component={App}>
         <IndexRoute component={GameFeed}></IndexRoute>
         <Route path="/registration" component={GameRegistration}></Route>
+        <Route path="/players/:playerId/profile" component={PlayerProfile}></Route>
         <Route path="/soundtest" component={SoundTest}></Route>
       </Route>
     </Router>

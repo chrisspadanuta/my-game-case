@@ -19,6 +19,11 @@ public class ApplicationController {
         return new ModelAndView("index");
     }
 
+    @RequestMapping(value="players/{playerId}/profile", method= RequestMethod.GET)
+    public ModelAndView players() {
+        return new ModelAndView("index");
+    }
+
     @RequestMapping(value="soundtest", method= RequestMethod.GET)
     public ModelAndView soundTest() {
         return new ModelAndView("index");

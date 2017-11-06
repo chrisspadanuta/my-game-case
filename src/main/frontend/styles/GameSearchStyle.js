@@ -20,8 +20,8 @@ const gameSearchStyles = {
       }
     },
     media({ minWidth: '601px'}, {
-      display: 'inline-block',
-      width: '400px'
+      display: 'inline-block'
+      /*width: '400px'*/
     })
   ),
   searchBox: style(

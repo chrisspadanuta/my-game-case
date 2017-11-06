@@ -2,7 +2,7 @@ $mobile-device: 600px;
 $desktop-device: 601px;
 
 // "Instagram-like" webfont
-@font-face {
+/*@font-face {
     font-family: 'billabongregular';
     src: url('https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.eot');
     src: url('https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.eot?#iefix') format('embedded-opentype'),
@@ -12,7 +12,7 @@ $desktop-device: 601px;
     font-weight: normal;
     font-style: normal;
 
-}
+}*/
 
 html, body {
   border: 0;
@@ -32,7 +32,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-family: 'billabong', 'billabongregular';
+  font-family: 'billabong', 'billabongregular, Verdana';
   text-align: center;
   font-weight: 100;
   @media (max-width: $mobile-device) {
@@ -87,36 +87,10 @@ input[type="text"] {
   }
 }
 
-.game-feed {
+/*.game-feed {
   width: 800px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.game-feed .new-post {
-  border: 1px solid #444;
-  background-color: #333;
-  padding: 10px;
-  margin-bottom: 20px;
-}
-
-.game-feed .new-post .post-content {
-  text-align: center;
-}
-
-.game-feed .new-post .post-text {
-  width: 100%;
-  height: 50px;
-  resize: none;
-}
-
-.game-feed .new-post div.table {
-  display: table;
-  width: 100%;
-}
-
-.game-feed .new-post div.cell {
-  display: table-cell;
 }
 
 .game-feed .feed-items {
@@ -133,9 +107,9 @@ input[type="text"] {
   border-spacing: 10px;
   width: 100%;
   display: table;
-}
+}*/
 
-.game-feed .feed-item .header .box {
+/*.game-feed .feed-item .header .box {
   display: table-cell;
 }
 
@@ -172,7 +146,7 @@ input[type="text"] {
   color: #999;
   font-size: 1.2em;
   vertical-align: top;
-}
+}*/
 
 .game-feed .feed-item .player-info {
   border-collapse: separate;
@@ -181,11 +155,11 @@ input[type="text"] {
   width: 100%;
 }
 
-.game-feed .feed-item .post {
+/*.game-feed .feed-item .post {
   padding: 8px 12px;
-}
+}*/
 
-.game-feed .feed-item .post .text {
+/*.game-feed .feed-item .post .text {
   color: #aaa;
   font-size: 1.1em;
   margin-bottom: 5px;
@@ -197,4 +171,4 @@ input[type="text"] {
 }
 
 .game-feed .feed-item .post .screen-shot img {
-}
+}*/

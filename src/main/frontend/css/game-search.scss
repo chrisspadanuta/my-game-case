@@ -1,0 +1,54 @@
+$mobile-device: 900px;
+$desktop-device: 901px;
+
+.games-search {
+  background-color: #222;
+  padding: 10px;
+  text-align: center;
+  vertical-align: top;
+
+  .search-controls {
+    display: flex;
+    justify-content: space-between;
+    input {
+      flex: 2;
+      font-size: 1em;
+      margin-bottom: 3px;
+      margin-right: 5px;
+      width: 100%;
+    }
+
+    button {
+      flex: initial;
+      font-size: 1em;
+      padding: 10px;
+      margin-left: 5px;
+    }
+    @media (max-width: $mobile-device) {
+      button:before {
+        content: '+';
+        padding: 0 5px;
+      }
+    }
+    @media (min-width: $desktop-device) {
+      button:before {
+        content: 'Add New';
+      }
+    }
+  }
+
+  .search-list {
+    box-shadow: 0 2px 8px 2px #111;
+    border: 1px solid #222;
+    width: 100%;
+    float: left;
+    .search-match {
+      background-color: #333;
+      color: #125688;
+      font-size: 1em;
+      padding: 5px;
+      text-align: left;
+      cursor: pointer;
+    }
+  }
+}
