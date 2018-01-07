@@ -15,6 +15,7 @@ input[type="text"] {
 .makeshift-modal {
   .box {
     position: absolute;
+    box-sizing: border-box;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
