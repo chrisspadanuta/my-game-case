@@ -2,6 +2,7 @@ import React from 'react';
 import GameSearch from './GameSearch';
 import GamePlatformTable from './GamePlatformTable';
 import MakeshiftModal from './MakeshiftModal';
+import Carousel from './Carousel';
 
 import css from '../css/game-showcase.scss';
 
@@ -65,6 +66,8 @@ class GameShowcase extends React.Component {
       );
     }
 
+    const mockCards = [{}];
+
     let gamesByPlatformTables = this.createGameTables();
     return (
       <div className="game-showcase">
@@ -77,6 +80,7 @@ class GameShowcase extends React.Component {
           <h2>--- GAMES ---</h2>
           {gamesByPlatformTables}
         </div>
+        <Carousel cards={mockCards}/>
       </div>
     );
   }

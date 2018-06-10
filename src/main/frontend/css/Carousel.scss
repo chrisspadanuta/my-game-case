@@ -1,0 +1,46 @@
+.cards-row {
+  position: relative;
+  border-bottom: 1px dashed blue;
+  padding: 10px;
+  display: flex;
+  width: 700px;
+  margin: auto;
+  flex-wrap: nowrap;
+  overflow: auto;
+}
+
+.card:not(:last-child) {
+  margin-right: 15px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  box-shadow: 0 0 2px 0px #ccc;
+  max-width: 300px;
+  flex: 0 0 auto;
+}
+
+.header {
+  flex: initial;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.body {
+  flex: auto;
+  padding: 15px 0;
+}
+
+.footer {
+  flex: initial;
+  padding-top: 15px;
+  border-top: 1px solid #ccc;
+}
+
+.actions {
+  margin-top: 10px;
+  text-align: center;
+}
